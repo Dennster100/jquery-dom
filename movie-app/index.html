@@ -4,22 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie ratings</title>
+    <style>
+
+
+        .arrow{
+            margin: 3px;
+            padding: 5px;
+            /* padding-right: 7px;
+            padding-left: 7px; */
+            border: solid black;
+            border-width: 0 3px 3px 0px;
+            display: inline-block;
+        }
+        .down{
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        .up {
+            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+        }
+    </style>
 </head>
 <body>
     <form>
         Please enter a movie and a ratings
-        <input id="movieName" type="text">
+        <input id="movieTitle" type="text">
         <input id="movieRating" type="range" min="1" max="10">
         <button type="submit">Submit</button>
     </form>
     <br>
     <table>
-        <tbody>
+        <thead>
             <tr>
-                <th>Title</th>
-                <th>Rating</th>
+                <!-- &uarr; is ascci code for up -->
+                <th>Title<span id="title" class="arrow down"></span></th>
+                <th>Rating<span id="rating" class="arrow down"></span></th>
                 <th>Delete</th>
             </tr>
+        </thead>
+
+        <tbody>
+            
         
         </tbody>
     </table>
